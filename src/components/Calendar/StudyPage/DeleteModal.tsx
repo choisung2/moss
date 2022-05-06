@@ -5,7 +5,7 @@ import {
   ConfirmModal,
   DeleteConfirmModal,
 } from 'src/styles/components/Calendar';
-import { ISchDelRes } from 'src/types/schedule';
+import { ISchDelRes } from 'src/types/Schedule';
 
 interface IDeleteSchedule {
   scheduleId?: number;
