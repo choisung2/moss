@@ -50,7 +50,7 @@ export default function NoticePage(): JSX.Element {
     e.preventDefault();
     if (loading) return;
     setNoticeList(
-      (noticeList = [{ category: category, title: title, content: content }]),
+      noticeList = [{ category: category, title: title, content: content }],
     );
     const data = { ...noticeList };
     const inputData = data[0];
