@@ -19,8 +19,6 @@ export const TodoList = ({ studyId }: number | any) => {
 
   const { data, mutate } = useSWR('/api/todo');
 
-  // console.log(data)
-
   const [todoList, setTodoList] = useState<TodoData[]>([
     {
       id: 0,
@@ -35,7 +33,7 @@ export const TodoList = ({ studyId }: number | any) => {
     },
   ]);
 
-  const arr: any[] = []
+  const arr: string[] = []
 
   data?.studyTodo?.map((v: TodoData) =>{
     if(v.study) arr.push(v.study.studyName)

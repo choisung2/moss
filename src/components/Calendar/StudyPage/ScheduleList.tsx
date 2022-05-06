@@ -14,7 +14,7 @@ import {
   Wrap,
 } from 'src/styles/components/Calendar';
 import { ScheduleModal } from './ScheduleModal';
-import { ITotalStudyScheduleRes } from 'src/types/schedule';
+import { ITotalStudyScheduleRes } from 'src/types/Schedule';
 
 export const ScheduleList = () => {
   //QUERY

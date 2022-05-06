@@ -19,12 +19,8 @@ export const TodoItem = ({studyId, todoItem, todoList, category}: TodoList) => {
   const [del] = useMutation('/api/todo/delTodo');
   const [edit] = useMutation('/api/todo/editTodo');
 
-  // console.log(todoItem)
-
   const [editTodo, setEditTodo] = useState(todoItem.title)
   const [isEdit, setIsEdit] = useState(false)
-
-  // const name = (todoItem.study.studyName).slice(0, 2)
 
   const editRef = useRef<HTMLInputElement>(null)
   
@@ -33,13 +29,11 @@ export const TodoItem = ({studyId, todoItem, todoList, category}: TodoList) => {
   }
 
   const todoCompleted = (id: number) => {
-    // setTodoList(todoList.map(v => v.id === id ? {...v, completed: !v.completed} : v))
     edit({id: id, title: editTodo, completed: !(todoList.filter(v => v.id === id && {...v, completed: !v.completed})[0].completed)})
     router.reload();
   }
 
   const todoEdit = (id: number) => {
-    // setTodoList(todoList.map(v => v.id === id ? {...v, title: editTodo} : v))
     setIsEdit(!isEdit)
     edit({id: id, title: editTodo, completed: todoItem.completed})
     if(editRef.current !== null) {
@@ -57,13 +51,9 @@ export const TodoItem = ({studyId, todoItem, todoList, category}: TodoList) => {
   }
 
   const todoDelete = (id: number) => {
-    // setTodoList(todoList.filter(v => v.id !== id))
     del(id)
     router.reload();
   }
-
-  useEffect(() => {
-  }, [])
 
   if(studyId) {
     return (

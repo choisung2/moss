@@ -5,7 +5,7 @@ import { ApplyStudyModal } from './ApplyStudyModal';
 import useSWR from 'swr';
 import { useRouter } from 'next/router';
 import useUser from 'src/libs/client/useUser';
-import { IStudyResponse } from 'src/types/study';
+import { IStudyResponse } from 'src/types/Study';
 
 export const StudyBanner = () => {
   const router = useRouter();

@@ -6,6 +6,9 @@ import { withApiSession } from 'src/libs/server/withSession';
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { user } = req.session;
 
+  console.log(req.session);
+  
+
   if (req.method === 'POST') {
     const {
       studyName,

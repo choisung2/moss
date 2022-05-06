@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { useState } from 'react';
-import { IStudyResponse } from 'src/types/study';
+import { IStudyResponse } from 'src/types/Study';
 import useSWR from 'swr';
 import { StudyCard } from '../StudyCard';
 import { CreateStudy } from './CreateStudy';

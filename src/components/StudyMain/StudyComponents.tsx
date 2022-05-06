@@ -7,7 +7,7 @@ import { Member } from './Member';
 import useSWR from 'swr';
 import { useRouter } from 'next/router';
 import useUser from 'src/libs/client/useUser';
-import { IStudyResponse } from 'src/types/study';
+import { IStudyResponse } from 'src/types/Study';
 import { StudyCalendarWrap } from '../Calendar/StudyPage/StudyCalendarWrap';
 
 export const StudyComponents = () => {
