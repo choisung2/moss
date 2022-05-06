@@ -11,7 +11,7 @@ interface NoticeData {
 }
 
 const PostEditor = (props: any) => {
-  const editorRef = React.createRef();
+  const editorRef= React.createRef<Editor>();
   const router = useRouter();
   const url = router.pathname;
   const { id } = router.query;
@@ -29,7 +29,7 @@ const PostEditor = (props: any) => {
   }, [data]);
 
   const onChangeIntroFunction = () => {
-    props.editor(editorRef.current.getInstance().getMarkdown());
+    props.editor(editorRef.current!.getInstance().getMarkdown());
   };
 
   return (
