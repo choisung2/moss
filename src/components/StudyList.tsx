@@ -11,10 +11,12 @@ export const StudyList = () => {
   const [showItem, setShowItem] = useState<number>(8);
   const [noMoreMsg, setNoMoreMsg] = useState<boolean>(false);
   const ListMore = () => {
-    if (data?.totalStudies?.length > showItem) {
-      setShowItem(showItem * 2);
-    } else {
-      setNoMoreMsg(true);
+    if(data) {
+      if (data?.totalStudies?.length > showItem) {
+        setShowItem(showItem * 2);
+      } else {
+        setNoMoreMsg(true);
+      }
     }
   };
 
