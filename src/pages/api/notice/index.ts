@@ -6,7 +6,8 @@ import { withApiSession } from 'src/libs/server/withSession';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    const [{ category, title, content }] = req.body;
+    const [{ category, title, content, studyId }] = req.body;
+
     const { user } = req.session;
     let noticeData = await client.notice.create({
       data: {
