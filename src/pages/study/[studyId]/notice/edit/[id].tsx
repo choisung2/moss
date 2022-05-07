@@ -26,7 +26,7 @@ export default function NoticePage(): JSX.Element {
   const [editNotice, { loading, data }] = useMutation('/api/notice/edit');
 
   //FORM
-  const [noticeList, setNoticeList] = useState<NoticeData[]>([]);
+  const [noticeList, setNoticeList] = useState<any[]>();
   const [category, setCategory] = useState('');
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -50,7 +50,7 @@ export default function NoticePage(): JSX.Element {
     e.preventDefault();
     if (loading) return;
     setNoticeList(
-      noticeList = [{ category: category, title: title, content: content }],
+      [{ categor: category, title: title, content: content }],
     );
     const data = { ...noticeList };
     const inputData = data[0];
