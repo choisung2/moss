@@ -3,7 +3,7 @@ import { FindForm } from 'src/components/Find/FindForm';
 import useMutation from 'src/libs/client/useMutation';
 import { Container, H1 } from 'src/styles/components';
 
-export default function find_pw() {
+export default function Find_pw() {
   //비밀번호는 아이디로 찾도록 한다.
 
   //POST
