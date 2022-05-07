@@ -159,6 +159,7 @@ export default function Profile() {
             name="username"
             type="text"
             placeholer="수정할 이름을 적어주세요."
+            label="이름"
           />
 
           <JoinInput
@@ -172,6 +173,7 @@ export default function Profile() {
             name="email"
             type="email"
             placeholer="수정할 이메일를 적어주세요."
+            label="이메일"
           />
 
           <JoinInput
@@ -185,6 +187,7 @@ export default function Profile() {
             name="phone"
             type="text"
             placeholer="수정할 휴대폰 번호를 적어주세요."
+            label="휴대폰 번호"
           />
 
           <JoinInput
@@ -193,6 +196,7 @@ export default function Profile() {
             name="location"
             type="text"
             placeholer="수정할 위치를 적어주세요."
+            label="거주지"
           />
           {errors.email && <Error>{errors.email.message}</Error>}
           <Btn type="submit">{loading ? '로딩중...' : '프로필 수정'}</Btn>

@@ -5,12 +5,20 @@ import useMutation from 'src/libs/client/useMutation';
 import useUser from 'src/libs/client/useUser';
 import useSWR from 'swr';
 
+// type JSONValue =
+//   | string
+//   | number
+//   | boolean
+//   | { [x: string]: JSONValue }
+//   | Array<JSONValue>;
+
 interface IModal {
   modal: boolean;
   setModal: Function;
   joinMsg?: string | null;
   studyid: number;
-  joinMember: JsonValue|string[]|undefined;
+  // joinMember:  JSONValue | string[] | undefined;
+  joinMember:  any | string[] | undefined;
 }
 
 export const ApplyStudyModal = ({

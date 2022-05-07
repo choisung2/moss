@@ -5,6 +5,8 @@ import withHandler from 'src/libs/server/withHandler';
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { memberList, studyid } = req.body;
 
+  console.log(memberList);
+  
   if (req.method === 'POST') {
     const studyinfo = await client.study.findUnique({
       where: {

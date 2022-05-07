@@ -13,8 +13,10 @@ export const StudyBanner = () => {
   const StudyId = Number(studyId);
   const { isLoggedIn, loggedInUser } = useUser();
 
-  const { data } = useSWR<IStudyResponse>(`/api/study/${studyId}`);
+  const { data } = useSWR(`/api/study/${studyId}`);
   const logoImg = `https://imagedelivery.net/akzZnR6sxZ1bwXZp9XYgsg/${data?.study?.image}/avatar`;
+
+  console.log(data)
 
   const [modal, setModal] = useState(false);
   const openModal = () => setModal((prev) => !prev);

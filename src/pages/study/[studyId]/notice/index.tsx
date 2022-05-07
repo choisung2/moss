@@ -85,7 +85,7 @@ export default function NoticePage(): JSX.Element {
       <BtnGroup>
         <Link href={`/study/${Number(studyId)}/notice/write`}>
           <a>
-            <Button text="글작성" className="write" />
+            <Button text="글작성" className="write" type='submit'/>
           </a>
         </Link>
       </BtnGroup>
